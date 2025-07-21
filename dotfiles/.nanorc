@@ -1,0 +1,8 @@
+# Activate mouse
+set mouse
+
+# Show line number
+set linenumbers
+
+# Set space num of tab
+set tabsize 4
