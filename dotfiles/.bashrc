@@ -134,3 +134,6 @@ alias rsync_download='rsync -avz --partial --progress'
 alias fd="fdfind"
 FZF_DEFAULT_COMMAND="fd --type file"
 FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# Japanize
+export LC_ALL=ja_JP.utf8
