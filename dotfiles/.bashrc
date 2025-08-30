@@ -137,3 +137,11 @@ FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Japanize
 export LC_ALL=ja_JP.utf8
+
+# pnpm
+export PNPM_HOME="/home/sumito/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
