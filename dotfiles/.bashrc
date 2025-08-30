@@ -119,8 +119,8 @@ fi
 # linuxbrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# rye
-source "$HOME/.rye/env"
+# uv
+. "$HOME/.local/bin/env"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
