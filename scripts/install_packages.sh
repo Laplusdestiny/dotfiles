@@ -24,3 +24,21 @@ if [[ "$install_brew" == "y" ]]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     echo "Finished installing linuxbrew"
 fi
+
+# Starship
+read -p "Do you want to install Starship? (y/n): " install_starship
+if [[ "$install_starship" == "y" ]]; then
+    echo "Installing Starship"
+    curl -sS https://starship.rs/install.sh | sh
+    echo "Finished installing Starship"
+fi
+
+# locale, language-pack-ja
+read -p "Do you want to install locale and language-pack-ja? (y/n): " install_locale
+if [[ "$install_locale" == "y" ]]; then
+    echo "Installing locale and language-pack-ja"
+    sudo apt-get update
+    sudo apt-get install -y locales language-pack-ja
+    sudo locale-gen ja_JP.UTF-8
+    echo "Finished installing locale and language-pack-ja"
+fi
