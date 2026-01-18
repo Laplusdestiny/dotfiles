@@ -148,3 +148,16 @@ esac
 
 # Starship
 eval "$(starship init bash)"
+
+# GPG
+export GPG_TTY=$(tty)
+
+# jj shell completion
+if [ -f ~/.jj_completion.bash ]; then
+  source ~/.jj_completion.bash
+fi
+
+# gh shell completion
+if [ -f ~/.gh_completion.bash ]; then
+  source ~/.gh_completion.bash
+fi

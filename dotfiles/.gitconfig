@@ -1,6 +1,7 @@
 [user]
 	name = Laplusdestiny
 	email = laplusdestiny@laplusdestiny.com
+	signingkey = 98CC0F8A70C52217
 [alias]
 	vacuum = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|main|master'|xargs git branch -d; };f"
 [core]
@@ -8,5 +9,6 @@
 	editor = nano
 [commit]
 	verbose = true
+	gpgsign = true
 [rerere]
 	enabled = true
