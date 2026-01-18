@@ -25,6 +25,19 @@ if [[ "$install_brew" == "y" ]]; then
     echo "Finished installing linuxbrew"
 fi
 
+# Nerd Fonts
+read -p "Do you want to install Nerd Fonts? (y/n): " install_nerd_fonts
+if [[ "$install_nerd_fonts" == "y" ]]; then
+    echo "Installing Nerd Fonts"
+    mkdir -p ~/.local/share/fonts
+    cd ~/.local/share/fonts
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/CascadiaCode.zip
+    unzip CascadiaCode.zip
+    rm CascadiaCode.zip
+    fc-cache -fv
+    echo "Finished installing Nerd Fonts"
+fi
+
 # Starship
 read -p "Do you want to install Starship? (y/n): " install_starship
 if [[ "$install_starship" == "y" ]]; then
