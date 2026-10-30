@@ -1,7 +1,7 @@
 [user]
 	name = Laplusdestiny
 	email = laplusdestiny@laplusdestiny.com
-	signingkey = 98CC0F8A70C52217
+	signingkey = DC56A55774EDA745
 [alias]
 	vacuum = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|main|master'|xargs git branch -d; };f"
 [core]
@@ -12,3 +12,5 @@
 	gpgsign = true
 [rerere]
 	enabled = true
+[push]
+	autoSetupRemote = true
