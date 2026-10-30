@@ -139,7 +139,7 @@ FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export LC_ALL=ja_JP.utf8
 
 # pnpm
-export PNPM_HOME="/home/sumito/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME/bin:"*) ;;
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
@@ -162,7 +162,10 @@ if [ -f ~/.gh_completion.bash ]; then
   source ~/.gh_completion.bash
 fi
 
+# Local binaries (Antigravity CLI etc.)
+export PATH="$HOME/.local/bin:$PATH"
 
-# Added by Antigravity CLI installer
-export PATH="/home/sumito/.local/bin:$PATH"
-. "$HOME/.cargo/env"
+# Rust (cargo)
+if [ -f "$HOME/.cargo/env" ]; then
+  . "$HOME/.cargo/env"
+fi
